@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SegundaAppMiniPoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloth_green" translatesAutoresizingMaskIntoConstraints="NO" id="L3C-CL-k2k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="main_image" translatesAutoresizingMaskIntoConstraints="NO" id="ZtU-BL-YOt">
+                                <rect key="frame" x="37.5" y="25" width="300" height="219"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu apuesta: $Pesos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saY-nE-ciU">
+                                <rect key="frame" x="0.0" y="264" width="375" height="39.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdl-TJ-U3n">
+                                <rect key="frame" x="70" y="569" width="235" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="NIs-LK-gmD"/>
+                                    <constraint firstAttribute="width" constant="235" id="xbJ-Wy-lmc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Apostar" cornerStyle="dynamic" titleAlignment="center">
+                                    <backgroundConfiguration key="background" image="textura_plato" imageContentMode="scaleToFill" strokeWidth="2">
+                                        <color key="strokeColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnApostar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUd-l5-1j8"/>
+                                    <segue destination="5XI-2K-scD" kind="show" id="w9G-Fc-Wo2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEv-Gk-WGp">
+                                <rect key="frame" x="70" y="613" width="235" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="SZa-fk-JxL"/>
+                                    <constraint firstAttribute="height" constant="34" id="jDf-1W-LqZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Jugar" cornerStyle="dynamic" titleAlignment="center">
+                                    <backgroundConfiguration key="background" image="textura_plato" imageContentMode="scaleToFill" strokeWidth="2">
+                                        <color key="strokeColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnJugar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nvp-wH-NqF"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="X6C-cL-fTE">
+                                <rect key="frame" x="10" y="316" width="355" height="234"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carta_volteada" translatesAutoresizingMaskIntoConstraints="NO" id="4jB-Jj-JhB">
+                                        <rect key="frame" x="0.0" y="47" width="69.5" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="pF3-KB-IKW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carta_volteada" translatesAutoresizingMaskIntoConstraints="NO" id="aEG-q6-4QZ">
+                                        <rect key="frame" x="71.5" y="47" width="69.5" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="5rM-3X-nLD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carta_volteada" translatesAutoresizingMaskIntoConstraints="NO" id="uYp-Rv-9gT">
+                                        <rect key="frame" x="143" y="47" width="69" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="L4r-yd-xP2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carta_volteada" translatesAutoresizingMaskIntoConstraints="NO" id="HTN-fM-9Lr">
+                                        <rect key="frame" x="214" y="47" width="69.5" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="5zO-Oh-YNi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carta_volteada" translatesAutoresizingMaskIntoConstraints="NO" id="L78-6I-nPq">
+                                        <rect key="frame" x="285.5" y="47" width="69.5" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="w3b-dJ-aoD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="L3C-CL-k2k" secondAttribute="bottom" id="0hd-f4-gsy"/>
+                            <constraint firstItem="L3C-CL-k2k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2E6-4z-X8Z"/>
+                            <constraint firstItem="QEv-Gk-WGp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="48o-eI-MFz"/>
+                            <constraint firstItem="L3C-CL-k2k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ecg-yu-2lO"/>
+                            <constraint firstItem="X6C-cL-fTE" firstAttribute="leading" secondItem="L3C-CL-k2k" secondAttribute="leading" constant="10" id="Fw9-rA-ml8"/>
+                            <constraint firstItem="ZtU-BL-YOt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HQ7-xP-iSO"/>
+                            <constraint firstItem="QEv-Gk-WGp" firstAttribute="top" secondItem="Sdl-TJ-U3n" secondAttribute="bottom" constant="10" id="JlG-To-JPY"/>
+                            <constraint firstItem="saY-nE-ciU" firstAttribute="top" secondItem="ZtU-BL-YOt" secondAttribute="bottom" constant="20" id="NSR-uM-Ocr"/>
+                            <constraint firstItem="ZtU-BL-YOt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="R66-PQ-7JX"/>
+                            <constraint firstItem="saY-nE-ciU" firstAttribute="trailing" secondItem="L3C-CL-k2k" secondAttribute="trailing" id="TPu-tg-JI7"/>
+                            <constraint firstItem="X6C-cL-fTE" firstAttribute="trailing" secondItem="L3C-CL-k2k" secondAttribute="trailing" constant="-10" id="b7u-Gv-G6f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L3C-CL-k2k" secondAttribute="trailing" id="cav-0U-OYJ"/>
+                            <constraint firstItem="Sdl-TJ-U3n" firstAttribute="top" secondItem="X6C-cL-fTE" secondAttribute="bottom" constant="19" id="lYZ-Rf-CWD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QEv-Gk-WGp" secondAttribute="bottom" constant="20" id="pAg-mY-2hm"/>
+                            <constraint firstItem="X6C-cL-fTE" firstAttribute="top" secondItem="saY-nE-ciU" secondAttribute="bottom" constant="12.5" id="ts0-v6-Hni"/>
+                            <constraint firstItem="saY-nE-ciU" firstAttribute="leading" secondItem="L3C-CL-k2k" secondAttribute="leading" id="xET-yg-tsd"/>
+                            <constraint firstItem="Sdl-TJ-U3n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xsw-V6-s4b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ivCarta1" destination="4jB-Jj-JhB" id="lr9-Ov-qJG"/>
+                        <outlet property="ivCarta2" destination="aEG-q6-4QZ" id="9yF-8s-rrk"/>
+                        <outlet property="ivCarta3" destination="uYp-Rv-9gT" id="o4b-2b-mNt"/>
+                        <outlet property="ivCarta4" destination="HTN-fM-9Lr" id="caD-bD-emZ"/>
+                        <outlet property="ivCarta5" destination="L78-6I-nPq" id="Gbo-E2-an1"/>
+                        <outlet property="lblApuesta" destination="saY-nE-ciU" id="5hr-6Y-N7m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.719626168224295" y="75.161987041036724"/>
+        </scene>
+        <!--Bet Screen-->
+        <scene sceneID="eHM-XT-xHr">
+            <objects>
+                <viewController id="5XI-2K-scD" customClass="BetScreen" customModule="SegundaAppMiniPoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SdK-a1-HmJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloth_red" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f81-8u-OIx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="ryj-Sl-g8L"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuanto quieres apostar?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYW-Q4-Mcr">
+                                <rect key="frame" x="20.5" y="35" width="334" height="32.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="3"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Cantidad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agx-8d-cp3">
+                                <rect key="frame" x="20" y="108" width="339" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="va1-9C-CI1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="31"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVU-dt-tTX">
+                                <rect key="frame" x="25" y="168" width="329" height="43"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Apostar" subtitle="" titleAlignment="center">
+                                    <backgroundConfiguration key="background" cornerRadius="-9" image="cloth_red" strokeWidth="2" strokeOutset="0.0">
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="strokeColor" systemColor="labelColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnBeat:" destination="5XI-2K-scD" eventType="touchUpInside" id="xxe-bq-DSI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbC-D0-zm4">
+                                <rect key="frame" x="42" y="566" width="295" height="42.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Jugar" cornerStyle="capsule" titleAlignment="center">
+                                    <backgroundConfiguration key="background" image="cloth_red" strokeWidth="2">
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnJugar:" destination="5XI-2K-scD" eventType="touchUpInside" id="LpB-7L-bgD"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="228" verticalHuggingPriority="251" image="dados_rojos" translatesAutoresizingMaskIntoConstraints="NO" id="Fdg-mG-BqI">
+                                <rect key="frame" x="16" y="265" width="343" height="222"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GXp-bQ-HiI"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gYW-Q4-Mcr" firstAttribute="leading" secondItem="GXp-bQ-HiI" secondAttribute="leading" constant="20.5" id="2ne-qA-nKm"/>
+                            <constraint firstItem="GXp-bQ-HiI" firstAttribute="bottom" secondItem="YbC-D0-zm4" secondAttribute="bottom" constant="38.5" id="4j7-du-UYm"/>
+                            <constraint firstItem="GXp-bQ-HiI" firstAttribute="trailing" secondItem="f81-8u-OIx" secondAttribute="trailing" id="5sV-vN-A9z"/>
+                            <constraint firstItem="agx-8d-cp3" firstAttribute="top" secondItem="gYW-Q4-Mcr" secondAttribute="bottom" constant="40.5" id="9B5-zi-Ddu"/>
+                            <constraint firstItem="GXp-bQ-HiI" firstAttribute="trailing" secondItem="MVU-dt-tTX" secondAttribute="trailing" constant="21" id="AxS-fb-gHT"/>
+                            <constraint firstItem="MVU-dt-tTX" firstAttribute="leading" secondItem="GXp-bQ-HiI" secondAttribute="leading" constant="25" id="JA4-ab-Ptq"/>
+                            <constraint firstItem="Fdg-mG-BqI" firstAttribute="top" secondItem="GXp-bQ-HiI" secondAttribute="top" constant="265" id="MWJ-Kg-xcK"/>
+                            <constraint firstItem="MVU-dt-tTX" firstAttribute="top" secondItem="agx-8d-cp3" secondAttribute="bottom" constant="30" id="Q1A-ff-hSZ"/>
+                            <constraint firstItem="Fdg-mG-BqI" firstAttribute="leading" secondItem="GXp-bQ-HiI" secondAttribute="leading" constant="16" id="Std-oc-7tq"/>
+                            <constraint firstItem="GXp-bQ-HiI" firstAttribute="trailing" secondItem="YbC-D0-zm4" secondAttribute="trailing" constant="38" id="Tkn-gm-vhG"/>
+                            <constraint firstItem="f81-8u-OIx" firstAttribute="leading" secondItem="GXp-bQ-HiI" secondAttribute="leading" id="XfN-0L-bRK"/>
+                            <constraint firstItem="GXp-bQ-HiI" firstAttribute="bottom" secondItem="Fdg-mG-BqI" secondAttribute="bottom" constant="160" id="Zq2-en-nFW"/>
+                            <constraint firstItem="f81-8u-OIx" firstAttribute="top" secondItem="GXp-bQ-HiI" secondAttribute="top" id="eCF-1V-9EL"/>
+                            <constraint firstItem="GXp-bQ-HiI" firstAttribute="trailing" secondItem="Fdg-mG-BqI" secondAttribute="trailing" constant="16" id="kcK-bL-ypf"/>
+                            <constraint firstItem="GXp-bQ-HiI" firstAttribute="trailing" secondItem="agx-8d-cp3" secondAttribute="trailing" constant="16" id="pke-Gb-vNF"/>
+                            <constraint firstItem="gYW-Q4-Mcr" firstAttribute="top" secondItem="GXp-bQ-HiI" secondAttribute="top" constant="35" id="sTI-1t-h47"/>
+                            <constraint firstItem="YbC-D0-zm4" firstAttribute="leading" secondItem="GXp-bQ-HiI" secondAttribute="leading" constant="42" id="vIV-T1-Zmq"/>
+                            <constraint firstItem="GXp-bQ-HiI" firstAttribute="trailing" secondItem="gYW-Q4-Mcr" secondAttribute="trailing" constant="20.5" id="vQ9-us-rji"/>
+                            <constraint firstItem="agx-8d-cp3" firstAttribute="leading" secondItem="GXp-bQ-HiI" secondAttribute="leading" constant="20" id="w4G-zq-avE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="v4k-eT-Zq2"/>
+                    <connections>
+                        <outlet property="btnJugar" destination="YbC-D0-zm4" id="1g0-FN-Dvf"/>
+                        <outlet property="tfBet" destination="agx-8d-cp3" id="UgK-du-XyV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLm-7p-U1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.75" y="-20.070422535211268"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="carta_volteada" width="370" height="582"/>
+        <image name="cloth_green" width="1014" height="1280"/>
+        <image name="cloth_red" width="1280" height="1277"/>
+        <image name="dados_rojos" width="960" height="599"/>
+        <image name="main_image" width="300" height="219"/>
+        <image name="textura_plato" width="460" height="351"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
